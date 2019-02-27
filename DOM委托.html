@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+      /**
+       * @time  2019/1/8 16:17
+       * @author  Bill Wang <vuejs@vip.qq.com>
+       * @desc
+       * @param
+       * @todo
+       */
+        window.onload = () => {
+            document.addEventListener('click', event => {
+                // console.log(event.target);
+                switch (event.target) {
+                    case document.querySelector('.btn1'):
+                        console.log('按钮一按下了');
+                        break;
+                    case document.querySelector('.btn2'):
+                        console.log('按钮二按下了');
+                }
+            })
+            document.addEventListener('selectstart', event => {
+                //event.target.innerText = '不允许拷贝奥！';
+                console.log('你还想复制我？？？');
+                return false;
+            })
+            document.addEventListener('dragstart', event => {
+                //event.target.innerText = '不允许拷贝奥！';
+                console.log('你还想复制我!!？？？');
+                return false;
+            })
+            document.addEventListener('copy', event => {
+                //event.target.innerText = '不允许拷贝奥！';
+                console.log('你还想复制我!!？？？');
+                return false;
+            })
+            document.oncopy = function () {
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+<button class="btn1">按钮一</button>
+<button class="btn2">按钮二</button>
+<div>
+    15454515151515
+</div>
+</body>
+</html>

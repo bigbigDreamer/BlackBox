@@ -1,0 +1,1 @@
+console.assert(false,'启动断言调试');

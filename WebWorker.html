@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="webworker.js"></script>
+</head>
+<body>
+
+<div class="app">
+    <button>点我</button>
+</div>
+<script>
+    const worker = new Worker('./webworker.js');
+    worker.onmessage = function (onent) {
+        console.log(onent.data)
+        onent.data ? (() => {
+            document.querySelector('.app button').addEventListener('click', (e) => {
+                e.stopImmediatePropagation();
+                console.log('我被点击了');
+            }, false);
+        })() : console.log('你不可以点击奥！');
+    }
+    worker.postMessage('请问我可以点击这个按钮吗？');
+</script>
+</body>
+</html>

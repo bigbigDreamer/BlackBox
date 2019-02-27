@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /**
+         * @time  2019/2/27 19:17
+         * @author  Bill Wang <vuejs@vip.qq.com>
+         * @desc
+         */
+        fetch('http://127.0.0.1:3000/getData',{
+            method:'GET',
+            mode:'cors',
+        })
+            .then(res => {
+                return res.json();
+            })
+            .then(data => {
+                console.log(data.msg);
+            })
+            .catch(err => {
+                console.log(err);
+            });
+    </script>
+</head>
+<body>
+
+</body>
+</html>
