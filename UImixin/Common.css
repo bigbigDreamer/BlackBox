@@ -1,0 +1,11 @@
+#app {
+  font-size: 18px;
+  color: #515A6E;
+  font-family: '微软雅黑';
+}
+#app .dividingLine {
+  background-color: #E8EAEC;
+  width: 80%;
+  height: 1px;
+}
+/*# sourceMappingURL=Common.css.map */
