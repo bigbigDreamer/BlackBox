@@ -5,6 +5,7 @@
  * @todo Try to implement object privatization, that is, freeze the object.
  */
 //动物类
+
 class Animal {
     constructor(name) {
         this.name = name;
