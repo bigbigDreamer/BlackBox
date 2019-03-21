@@ -12,7 +12,7 @@ function Foo() {
 const obj = new Foo();
 
 console.log(Foo.prototype === obj.__proto__);
-console.log(obj.__proto__.constructor === Foo);
+console.log(obj.constructor === Foo);
 console.log(Foo.prototype.__proto__ === Object.prototype);
 console.log(Object.prototype.__proto__ === null);
-console.log(Object.__proto__.constructor === Function);
+console.log(Object.constructor === Function);
